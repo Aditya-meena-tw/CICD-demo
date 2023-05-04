@@ -26,5 +26,5 @@ if p > c:
 
     print('player 1 is winner')
 else:
-
+#this is test the pipeline
     print('player 2 is winnear')
