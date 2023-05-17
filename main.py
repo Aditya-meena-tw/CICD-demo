@@ -11,7 +11,7 @@ p = sum(list1)
 print(p)
 # coomment to check the post and pull using jrnkins
 list2=[]
-
+# changes
 for i in range(5):
     num2 = random.randrange(21)
     input('enter no. ')
