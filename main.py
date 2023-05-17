@@ -9,7 +9,7 @@ for i in range(5):
 print(list1)
 p = sum(list1)
 print(p)
-
+# coomment to check the post and pull using jrnkins
 list2=[]
 
 for i in range(5):
