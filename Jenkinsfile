@@ -11,6 +11,10 @@ pipeline {
              steps {
                 sh 'python3 unit_test.py'
         }
+        stage("deploy"){
+            steps {
+                echo "deploying...."
+    }
     }
 }
 }
