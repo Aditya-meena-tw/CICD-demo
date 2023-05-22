@@ -1,15 +1,17 @@
 pipeline {
-agent any
+    agent any
 
-    
-    stage('build') {
-  steps {
-    sh 'pip install -r requirements.txt'
-  }
-}
-    stage ('Test'){
-        steps {
-            sh 'python unit_test.py'
+    stages {
+        stage('Build') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'python unit_test.py'
+            }
         }
     }
 }
