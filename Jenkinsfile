@@ -1,17 +1,21 @@
 pipeline {
-    agent any
-    stages {
-       stage('Installing packages') {
-            steps {
-                // Use the sh step to install packages
-                sh 'pip install -r requirements.txt'
-            }
+agent any
+stages {
+    stage ('GIT Checkout'){
+        steps {
+            git changelog: false, poll: false, url: 'https://github.com/Tasfiq23/Devops_assessment_2.git'
         }
-      stage ('Test'){
-             steps {
-                sh 'python3 unit_test.py'
+    }
+    
+    stage('build') {
+  steps {
+    sh 'pip install -r requirements.txt'
+  }
+}
+    stage ('Test'){
+        steps {
+            sh 'python unit_test.py'
         }
-       
+    }
 }
 }
-
