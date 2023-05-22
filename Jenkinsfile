@@ -7,7 +7,7 @@ pipeline {
                 sh 'pip install -r requirements.txt'
             }
         }
-        stage ('Test'){
+      stage ('Test'){
              steps {
                 sh 'python3 unit_test.py'
         }
